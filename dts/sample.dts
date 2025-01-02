@@ -100,21 +100,6 @@
 	status = "okay";
 };
 
-&dsi0 {
-	outpost,owner = <0xC001F002>;
-	status = "okay";
-};
-
-&ltdc0 {
-    outpost,owner = <0xC001F002>;
-    status = "okay";
-};
-
-&i2c1 {
-	status = "okay";
-	outpost,owner = <0xC001F001>;
-};
-
 &rcc {
     clocks = <&pll1>;
     clock-frequency = <DT_FREQ_M(160)>;
@@ -156,59 +141,9 @@
 	status = "okay";
 };
 
-&led0 {
-	status = "okay";
-	outpost,owner = <0xC001F004>;
-	pinctrl-0 = <&led_pa5 &led_pa5>;
-};
-
-&led1 {
-	status = "okay";
-	outpost,owner = <0xC001F004>;
-	pinctrl-0 = <&led_pa6 &led_pa6>;
-};
-
-&led2 {
-	status = "okay";
-	outpost,owner = <0xC001F004>;
-	pinctrl-0 = <&led_pf7 &led_pf7>;
-};
-
-&backlight {
-	status = "okay";
-	outpost,owner = <0xC001F002>;
-	pinctrl-0 = <&backlight_pa9 &backlight_pa9>;
-};
-
-&panel {
-	status = "okay";
-	outpost,owner = <0xC001F002>;
-	pinctrl-0 = <&panel_reset_pf3 &panel_reset_pf3>;
-};
-
-&touch {
-	status = "okay";
-	outpost,owner = <0xC001F001>;
-	pinctrl-0 = <&touch_rstn>, <&touch_int_input>, <&touch_int_output>;
-
-};
-
-&i2c1 {
-	status = "okay";
-    outpost,owner = <0xC001F001>;
-    i2c,hsifreq = <40>;
-    pinctrl-0 = <&i2c1_scl_pb8>, <&i2c1_sda_pb9>;
-};
-
 &lpuart1{
 	status = "okay";
 	pinctrl-0 = <&lpuart1_tx_pc1>, <&lpuart1_rx_pc0>;
-};
-
-&spi3 {
-    status = "okay";
-    outpost,owner = <0xC001F004>;
-    pinctrl-0 = <&spi3_miso_pc11>, <&spi3_mosi_pc12>, <&spi3_sclk_pc10>;
 };
 
 &pinctrl {
