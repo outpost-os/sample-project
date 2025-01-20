@@ -11,14 +11,22 @@ scm.git.revision = 'main'
 config = 'configs/sentry/nucleo_u5a5.config'
 
 [runtime]
-scm.git.uri = 'git@github.com:outpost-os/shield.git'
+scm.git.uri = 'https://github.com/outpost-os/shield.git'
 scm.git.revision = 'main'
 config = 'configs/shield/shield.config'
 
 [application.hello]
-scm.git.uri = 'git@github.com:outpost-os/sample-rust-app.git'
+scm.git.uri = 'https://github.com/outpost-os/sample-rust-app.git'
 scm.git.revision = 'main'
 config = 'configs/hello/hello.config'
 build.backend = 'cargo'
 depends = []
 provides = ['hello.elf']
+
+[application.sample_c_app]
+scm.git.uri = 'https://github.com/outpost-os/sample-c-app.git'
+scm.git.revision = 'main'
+config = 'configs/hello_c/hello_c.config'
+build.backend = 'meson'
+depends = []
+provides = ['sample-c-app.elf']
